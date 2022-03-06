@@ -7,6 +7,7 @@ public class NFTCall : MonoBehaviour
 {
     [SerializeField] private Image image;
     [SerializeField] private Button showDocument;
+    [SerializeField] private Transform waitingCanvas;
     private Sprite mySprite;
     // [SerializeField] private Texture2D myTexture2D;
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class NFTCall : MonoBehaviour
     }
     IEnumerator getRequest(string uri)
     {
+        waitingCanvas.gameObject.SetActive(true);
         UnityWebRequest uwr = UnityWebRequest.Get(uri);
         yield return uwr.SendWebRequest();
         var image_uri = "";
@@ -46,6 +48,7 @@ public class NFTCall : MonoBehaviour
             mySprite = Sprite.Create(myTexture, new Rect(0.0f, 0.0f, myTexture.width, myTexture.height), new Vector2(0.5f, 0.5f), 100.0f);
             image.sprite = mySprite;
             image.gameObject.SetActive(true);
+            waitingCanvas.gameObject.SetActive(false);
         }
 
     }
