@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
@@ -15,6 +16,7 @@ public enum UserType
 
 public class ApplicationController : MonoBehaviour
 {
+    [SerializeField] private XROrigin xrOrigin;
     [SerializeField] private Transform initScene;
     [SerializeField] private Transform houseScene;
     [SerializeField] private Transform userChoiceCanvas;
@@ -55,6 +57,8 @@ public class ApplicationController : MonoBehaviour
 
     public void ResetScene()
     {
+        xrOrigin.transform.position = Vector3.zero;
+        xrOrigin.transform.rotation.SetEulerAngles(0, 90, 0);
         initScene.gameObject.SetActive(true);
         houseScene.gameObject.SetActive(false);
         userChoiceCanvas.gameObject.SetActive(true);
