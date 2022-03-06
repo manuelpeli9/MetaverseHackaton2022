@@ -18,6 +18,7 @@ public class ApplicationController : MonoBehaviour
     [SerializeField] private Transform initScene;
     [SerializeField] private Transform houseScene;
     [SerializeField] private Transform userChoiceCanvas;
+    [SerializeField] private Transform homeMenuCanvas;
     [SerializeField] private Transform houseSelectionCanvas;
     [SerializeField] private Transform errorPopup;
     [SerializeField] private Image documentImage;
@@ -50,6 +51,8 @@ public class ApplicationController : MonoBehaviour
         initScene.gameObject.SetActive(true);
         houseScene.gameObject.SetActive(false);
         userChoiceCanvas.gameObject.SetActive(true);
+        homeMenuCanvas.gameObject.SetActive(false);
+
         houseSelectionCanvas.gameObject.SetActive(false);
         errorPopup.gameObject.SetActive(false);
         waitCanvas.gameObject.SetActive(false);
@@ -71,6 +74,7 @@ public class ApplicationController : MonoBehaviour
             //SceneManager.LoadScene("Complete");
             houseScene.gameObject.SetActive(true);
             initScene.gameObject.SetActive(false);
+            homeMenuCanvas.gameObject.SetActive(true);
 
             if (userType == 0)
             {
