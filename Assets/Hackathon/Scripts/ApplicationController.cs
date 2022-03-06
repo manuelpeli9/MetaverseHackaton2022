@@ -12,6 +12,8 @@ public enum UserType
 
 public class ApplicationController : MonoBehaviour
 {
+    [SerializeField] private Transform initScene;
+    [SerializeField] private Transform houseScene;
     [SerializeField] private Transform userChoiceCanvas;
     [SerializeField] private Transform houseSelectionCanvas;
     [SerializeField] private Transform errorPopup;
@@ -20,10 +22,12 @@ public class ApplicationController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        initScene.gameObject.SetActive(true);
+        houseScene.gameObject.SetActive(false);
         userChoiceCanvas.gameObject.SetActive(true);
         houseSelectionCanvas.gameObject.SetActive(false);
         errorPopup.gameObject.SetActive(false);
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     public void UserChoice(int userType)
@@ -37,7 +41,9 @@ public class ApplicationController : MonoBehaviour
     {
         if (userType == 0 || userType == 1)
         {
-            SceneManager.LoadScene("Complete");
+            //SceneManager.LoadScene("Complete");
+            houseScene.gameObject.SetActive(true);
+            initScene.gameObject.SetActive(false);
         }
         else
         {
