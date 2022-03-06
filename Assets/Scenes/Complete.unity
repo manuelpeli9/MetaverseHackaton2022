@@ -560,6 +560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 227796755}
   showDocument: {fileID: 1856221452}
+  waitingCanvas: {fileID: 3974345192481360678}
 --- !u!114 &457559073 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3263051483190990001, guid: 5d3c8b7c671982c4f9d6ee677cf71298, type: 3}
@@ -85477,7 +85478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3572394898048955587, guid: 5d3c8b7c671982c4f9d6ee677cf71298, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1000
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 3572394898048955587, guid: 5d3c8b7c671982c4f9d6ee677cf71298, type: 3}
       propertyPath: m_SizeDelta.y
@@ -85485,7 +85486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3974345191507827884, guid: 5d3c8b7c671982c4f9d6ee677cf71298, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3974345191507827890, guid: 5d3c8b7c671982c4f9d6ee677cf71298, type: 3}
       propertyPath: m_Color.b
@@ -85601,7 +85602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3974345192485768886, guid: 5d3c8b7c671982c4f9d6ee677cf71298, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.465
+      value: 0.009
       objectReference: {fileID: 0}
     - target: {fileID: 3974345192485768886, guid: 5d3c8b7c671982c4f9d6ee677cf71298, type: 3}
       propertyPath: m_LocalRotation.w
@@ -85681,7 +85682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5184824261004074478, guid: 5d3c8b7c671982c4f9d6ee677cf71298, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 5184824261004074478, guid: 5d3c8b7c671982c4f9d6ee677cf71298, type: 3}
       propertyPath: m_SizeDelta.y
