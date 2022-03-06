@@ -23,6 +23,7 @@ public class ApplicationController : MonoBehaviour
     [SerializeField] private Transform errorPopup;
     [SerializeField] private Image documentImage;
     [SerializeField] private Button showDocument;
+    [SerializeField] private Button backButton;
     [Header("Buyer")]
     [SerializeField] private Transform buyerCanvas;
     [SerializeField] private Button startProposal;
@@ -48,6 +49,12 @@ public class ApplicationController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ResetScene();
+        //DontDestroyOnLoad(gameObject);
+    }
+
+    public void ResetScene()
+    {
         initScene.gameObject.SetActive(true);
         houseScene.gameObject.SetActive(false);
         userChoiceCanvas.gameObject.SetActive(true);
@@ -57,7 +64,6 @@ public class ApplicationController : MonoBehaviour
         errorPopup.gameObject.SetActive(false);
         waitCanvas.gameObject.SetActive(false);
         resultCanvas.gameObject.SetActive(false);
-        //DontDestroyOnLoad(gameObject);
     }
 
     public void UserChoice(int userType)
@@ -145,6 +151,7 @@ public class ApplicationController : MonoBehaviour
     {
         waitCanvas.gameObject.SetActive(true);
         UnityWebRequest uwr = UnityWebRequest.Get(uri);
+        uwr.timeout = 60;
         yield return uwr.SendWebRequest();
         var result = "";
         if (uwr.isNetworkError)
