@@ -58,7 +58,7 @@ public class ApplicationController : MonoBehaviour
     public void ResetScene()
     {
         xrOrigin.transform.position = Vector3.zero;
-        xrOrigin.transform.rotation.SetEulerAngles(0, 90, 0);
+        xrOrigin.transform.eulerAngles = new Vector3(0, 90, 0);
         initScene.gameObject.SetActive(true);
         houseScene.gameObject.SetActive(false);
         userChoiceCanvas.gameObject.SetActive(true);
