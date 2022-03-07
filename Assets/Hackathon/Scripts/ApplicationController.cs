@@ -57,6 +57,7 @@ public class ApplicationController : MonoBehaviour
 
     public void ResetScene()
     {
+        documentImage.gameObject.SetActive(false);
         xrOrigin.transform.position = Vector3.zero;
         xrOrigin.transform.eulerAngles = new Vector3(0, 90, 0);
         initScene.gameObject.SetActive(true);

@@ -497,6 +497,7 @@ GameObject:
   - component: {fileID: 425450071}
   - component: {fileID: 425450070}
   - component: {fileID: 425450072}
+  - component: {fileID: 425450073}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -523,7 +524,7 @@ MonoBehaviour:
   homeMenuCanvas: {fileID: 1317981851}
   houseSelectionCanvas: {fileID: 1756884572}
   errorPopup: {fileID: 957859802}
-  documentImage: {fileID: 0}
+  documentImage: {fileID: 227796755}
   showDocument: {fileID: 0}
   backButton: {fileID: 777796319}
   buyerCanvas: {fileID: 3974345192481360682}
@@ -563,6 +564,30 @@ MonoBehaviour:
   image: {fileID: 227796755}
   showDocument: {fileID: 1856221452}
   waitingCanvas: {fileID: 3974345192481360678}
+--- !u!114 &425450073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425450069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10f92b757c0ac1d48b627fc6793b7460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showMenu:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Show Menu
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 66b9755d-4d11-4432-83fd-3e3522f4e9e1
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 5537314994588697051, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!114 &457559073 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3263051483190990001, guid: 5d3c8b7c671982c4f9d6ee677cf71298, type: 3}

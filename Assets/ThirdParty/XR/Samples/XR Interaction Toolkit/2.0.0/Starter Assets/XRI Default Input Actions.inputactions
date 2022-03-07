@@ -317,17 +317,6 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "14a27f53-867e-4d15-92d9-3e36deb55b1b",
-                    "path": "<XRController>{LeftHand}/primaryButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Generic XR Controller",
-                    "action": "Teleport Select",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
                     "name": "Vector 3 Fallback",
                     "id": "14aeff85-d719-43ff-a124-b1cd7ca8686d",
                     "path": "Vector3Fallback",

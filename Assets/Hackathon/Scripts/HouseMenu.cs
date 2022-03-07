@@ -5,7 +5,14 @@ using UnityEngine.InputSystem;
 
 public class HouseMenu : MonoBehaviour
 {
-    public void OpenMenu()
+    public InputActionProperty showMenu;
+
+    private void Start()
+    {
+        showMenu.action.performed += OpenMenu;
+    }
+
+    public void OpenMenu(InputAction.CallbackContext context)
     {
         Debug.Log("Open");
     }
